@@ -1,0 +1,16 @@
+{% load comment_extras %}
+{#{% load bootstrap_themes %}#}
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    </head>
+
+    <body>
+        <div>
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>
+

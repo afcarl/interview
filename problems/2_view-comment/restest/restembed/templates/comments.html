@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+{% load comment_extras %}
+{% load bootstrap3 %}
+{% load bootstrap_themes %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_styles theme='cosmo' type='min.css' %}
+{% bootstrap_script use_min=True %}
+
+
+<div id="container">
+<header>
+<hgroup>
+<h1>Our all-time favorite user wisdom</h1>
+</hgroup>
+
+<h3 class="example-commentheading">1 comment</h3>
+
+<blockquote class="example-right">
+<p>{{ comment.comments.0.text }}</p>
+</blockquote>
+<p>
+  <img class="avatar" src="{{ comment.linked.medias.0.url }}" alt="avatar">
+{{ comment.linked.users.0.firstName }} {{ comment.linked.users.0.lastName }} said {{ comment.comments.0.createdAt }}</p>
+<p>
+
+</p>
+</header>
+</div>
+
+<footer class="footer">
+Wasn't that fascinating?
+</footer>
+
+<br>
+
+{% endblock %}

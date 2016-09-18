@@ -1,0 +1,7 @@
+Django
+django-bootstrap-themes
+django-bootstrap3
+djangorestframework
+django_extensions
+arrow
+requests
